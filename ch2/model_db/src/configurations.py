@@ -6,7 +6,11 @@ class DBConfigurations:
     # postgres_port = int(os.getenv("POSTGRES_PORT", 5432))
     # postgres_db = os.getenv("POSTGRES_DB")
     # postgres_server = os.getenv("POSTGRES_SERVER")
-
+    postgres_username = os.getenv("POSTGRES_USER", "root")
+    postgres_password = os.getenv("POSTGRES_PASSWORD", "root")
+    postgres_port = int(os.getenv("POSTGRES_PORT", 5432))
+    postgres_db = os.getenv("POSTGRES_DB", "model_db")
+    postgres_server = os.getenv("POSTGRES_SERVER", "0.0.0.0")
     sql_alchemy_database_url = (
         f"postgresql://{postgres_username}:{postgres_password}@{postgres_server}:{postgres_port}/{postgres_db}"
     )
