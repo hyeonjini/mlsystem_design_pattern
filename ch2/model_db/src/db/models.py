@@ -34,8 +34,8 @@ class Project(Base):
 
      created_datetime = Column(
          DateTime(timezone=True),
-         server_default=current_timestamp(),
-         nullable=False,
+         sever_default=current_timestamp(),
+         nuallable=False,
      )
 
 class Model(Base):
